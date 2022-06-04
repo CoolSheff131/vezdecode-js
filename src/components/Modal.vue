@@ -47,7 +47,6 @@ export default {
     },
   },
   mounted() {
-    console.log(this.qrCodeValue);
     
     this.onOpen();
   },
@@ -59,7 +58,6 @@ export default {
       }, this.timeout);
     },
     onOpen() {
-      console.log(this.qrCodeValue);
       setTimeout(() => {
         this.isOpen = this.isVisible;
       }, this.timeout);

@@ -45,7 +45,7 @@
       <!--/>-->
     </Content>
     <!--<Footer>content footer</Footer>-->
-    <Modal :isVisible="modal.show" :qrCodeValue="value" @onClose="modal.show = false" />
+    <Modal :isVisible="modal.show" :qrCodeValue="qrValue" @onClose="modal.show = false" />
     <!--<Spinner v-if="spinner" />-->
   </div>
 </template>
@@ -94,14 +94,16 @@ export default {
         {id: 8, name: 'Товар 8', cost: 20},
         {id: 9, name: 'Товар 9', cost: 200},
       ],
-      value: 'https://example.com',
-        
+      qrValue: '',
       spinner: true,
     };
   },
   methods: {
     buyProduct(product){
-      this.value = `${this.userId} ${product.id}`
+      let str = `{userId: ${this.userId}, productId: ${product.id}, date: ${Date()}}`;
+      let strArray = str.split('')
+      let crypted = strArray.map(value => value.charCodeAt(0) ^ 1).join('')
+      this.qrValue = crypted
       this.points -= product.cost
       this.modal.show = true
     },
