@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed top-0 left-0 w-full h-full flex justify-center">
+  <div class="w-full h-full flex justify-center">
     <svg
       class="transition-opacity animate-spin text-black self-center duration-500 opacity-100"
       :class="width"
