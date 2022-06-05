@@ -6,4 +6,4 @@
 
 QR CODE
 
-![alt text](https://github.com/CoolSheff131/vezdecode-js/blob/main/mobylink%20(3).png?raw=true)
+![alt text](https://github.com/CoolSheff131/vezdecode-js/blob/master/mobylink%20(3).png?raw=true)
